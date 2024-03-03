@@ -1,0 +1,73 @@
+:root {
+  --darkpurple: hsl(292, 42%, 14%); /* backgound-color:var(--darkpurple)*/
+  --White: hsl(0, 0%, 100%);
+  --Lightpink: hsl(276, 81%, 94%);
+  --Grayishpurple: hsl(292, 16%, 49%);
+}
+* {
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "worksans";
+  src: url(/assets/fonts/static/WorkSans-Bold.ttf),
+    url(/assets/fonts/static/WorkSans-Regular.ttf),
+    url(/assets/fonts/static/WorkSans-SemiBold.ttf),
+    url(/assets/fonts/WorkSans-Italic-VariableFont_wght.ttf),
+    url(/assets/fonts/WorkSans-VariableFont_wght.ttf);
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  background-image: url("/assets/images/background-pattern-mobile.svg");
+  background-repeat: repeat-x;
+  background-position: top;
+  background-color: var(--Lightpink);
+}
+
+.card {
+  width: 400px;
+  margin: 15vh auto;
+  text-align: left;
+  background-color: var(--White);
+  border-radius: 10px;
+  padding: 2em;
+
+  .headline {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    div {
+      margin-right: 1rem;
+    }
+  }
+  .question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    transition: 0.4s;
+    cursor: pointer;
+  }
+  .answer {
+    display: none;
+    transition: 0.4s;
+    overflow: hidden;
+  }
+  .active,
+  .question:hover {
+    padding: 0 1rem;
+    background-color: hsl(0, 5%, 84%);
+    border-radius: 15px;
+  }
+}
+h1,
+h2 {
+  color: var(--darkpurple);
+  font-family: "worksans";
+  font-weight: 700;
+}
+p {
+  color: var(--Grayishpurple);
+  font-family: "worksans";
+  font-weight: 400;
+}
